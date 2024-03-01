@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=gtk-calculator
+Exec=gtk-calculator
+Icon=org.joaopedrokuhn.GtkCalculator
+Terminal=false
+Type=Application
+Categories=GTK;
+StartupNotify=true

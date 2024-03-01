@@ -1,0 +1,6 @@
+data/org.joaopedrokuhn.GtkCalculator.desktop.in
+data/org.joaopedrokuhn.GtkCalculator.metainfo.xml.in
+data/org.joaopedrokuhn.GtkCalculator.gschema.xml
+src/main.py
+src/window.py
+src/window.ui

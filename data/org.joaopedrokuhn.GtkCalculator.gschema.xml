@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="gtk-calculator">
+	<schema id="org.joaopedrokuhn.GtkCalculator" path="/org/joaopedrokuhn/GtkCalculator/">
+	</schema>
+</schemalist>
