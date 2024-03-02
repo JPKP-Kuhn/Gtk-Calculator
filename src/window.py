@@ -17,14 +17,26 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-from gi.repository import Adw
-from gi.repository import Gtk
+from gi.repository import Adw, Gio, Gtk
 
 @Gtk.Template(resource_path='/org/joaopedrokuhn/GtkCalculator/window.ui')
 class GtkCalculatorWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'GtkCalculatorWindow'
+    
 
     label = Gtk.Template.Child()
+    solveEquation_input = Gtk.Template.Child()
+    
+    solveEquation_input.props.can_default = True
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
+
+        solveEquation_input = Gio.SimpleAction(name="solve")
+        solveEquation_input.connect("activate", self.solveEquation)
+        self.add_action(solveEquation_input)
+
+    def solveEquation(self, action, parameter):
+        equation = self.solveEquation_input.get_text()
+        self.label.set_text(equation)
+

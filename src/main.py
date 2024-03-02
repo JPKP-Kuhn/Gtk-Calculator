@@ -36,6 +36,7 @@ class GtkCalculatorApplication(Adw.Application):
         self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
+        self.set_accels_for_action('solve', ['<Ctrl>o'])
 
     def do_activate(self):
         """Called when the application is activated.
@@ -83,3 +84,4 @@ def main(version):
     """The application's entry point."""
     app = GtkCalculatorApplication()
     return app.run(sys.argv)
+

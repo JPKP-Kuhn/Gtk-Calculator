@@ -11,18 +11,29 @@
       <object class="AdwToolbarView">
         <property name="content">
           <object class="GtkGrid" id="label">
+            <property name="baseline-row">2</property>
             <property name="column-spacing">2</property>
             <property name="row-spacing">2</property>
             <child>
               <object class="GtkBox">
                 <property name="halign">end</property>
+                <property name="spacing">2</property>
+                <property name="vexpand">True</property>
+                <property name="width-request">0</property>
                 <child>
-                  <object class="GtkLabel" id="equation_output"/>
+                  <object class="GtkLabel" id="equation_output">
+                    <property name="ellipsize">start</property>
+                    <property name="lines">4</property>
+                    <property name="max-width-chars">50</property>
+                    <property name="width-chars">1</property>
+                  </object>
                 </child>
+                <!-- Custom fragments -->
                 <layout>
                   <property name="column">0</property>
                   <property name="column-span">2</property>
                   <property name="row">0</property>
+                  <property name="row-span">2</property>
                 </layout>
               </object>
             </child>
@@ -34,7 +45,7 @@
                 <layout>
                   <property name="column">0</property>
                   <property name="column-span">2</property>
-                  <property name="row">1</property>
+                  <property name="row">2</property>
                 </layout>
               </object>
             </child>
@@ -62,17 +73,18 @@
                   </object>
                 </child>
                 <layout>
-                  <property name="column">0</property>
-                  <property name="row">2</property>
+                  <property name="column">1</property>
+                  <property name="row">4</property>
                 </layout>
               </object>
             </child>
             <child>
-              <object class="GtkButton" id="equation_input">
+              <object class="GtkButton" id="solveEquation_input">
+                <property name="action-name">solveEquation_input</property>
                 <property name="label">solve</property>
                 <layout>
-                  <property name="column">1</property>
-                  <property name="row">2</property>
+                  <property name="column">0</property>
+                  <property name="row">3</property>
                 </layout>
               </object>
             </child>
@@ -95,7 +107,7 @@
                 </child>
                 <layout>
                   <property name="column">0</property>
-                  <property name="row">3</property>
+                  <property name="row">4</property>
                 </layout>
               </object>
             </child>
@@ -118,7 +130,7 @@
                 </child>
                 <layout>
                   <property name="column">0</property>
-                  <property name="row">4</property>
+                  <property name="row">5</property>
                 </layout>
               </object>
             </child>
@@ -138,7 +150,7 @@
         </child>
       </object>
     </property>
-    <property name="default-height">400</property>
+    <property name="default-height">350</property>
     <property name="default-width">300</property>
     <property name="fullscreened">True</property>
     <property name="maximized">True</property>
