@@ -18,8 +18,8 @@
 	(1,8,"(item)",None,7,None,None,None,None,None),
 	(1,9,"(item)",None,7,None,None,None,1,None),
 	(1,10,"(item)",None,7,None,None,None,2,None),
-	(1,11,"GtkGrid","label",2,None,None,None,-1,None),
-	(1,12,"GtkBox",None,11,None,None,None,-1,""),
+	(1,11,"GtkGrid",None,2,None,None,None,-1,None),
+	(1,12,"GtkBox",None,11,None,None,None,-1,None),
 	(1,13,"GtkLabel","equation_output",12,None,None,None,-1,None),
 	(1,14,"GtkScrolledWindow",None,11,None,None,None,-1,None),
 	(1,15,"GtkTextView","equation_text",14,None,None,None,-1,None),
@@ -28,7 +28,6 @@
 	(1,18,"GtkButton",None,16,None,None,None,-1,None),
 	(1,19,"GtkButton",None,16,None,None,None,-1,None),
 	(1,20,"GtkButton",None,16,None,None,None,-1,None),
-	(1,21,"GtkButton","solveEquation_input",11,None,None,None,-1,None),
 	(1,22,"GtkBox",None,11,None,None,None,-1,None),
 	(1,23,"GtkButton",None,22,None,None,None,-1,None),
 	(1,24,"GtkButton",None,22,None,None,None,-1,None),
@@ -36,7 +35,8 @@
 	(1,26,"GtkBox",None,11,None,None,None,-1,None),
 	(1,27,"GtkButton",None,26,None,None,None,-1,None),
 	(1,28,"GtkButton",None,26,None,None,None,-1,None),
-	(1,29,"GtkButton",None,26,None,None,None,-1,None)
+	(1,29,"GtkButton",None,26,None,None,None,-1,None),
+	(1,30,"GtkButton","equation_input",11,None,None,None,-1,None)
   </object>
   <object_property>
 	(1,1,"AdwApplicationWindow","content",None,None,None,None,None,2,None,None,None,None),
@@ -56,40 +56,37 @@
 	(1,9,"(item)","label","_Keyboard Shortcuts","yes",None,None,None,None,None,None,None,None),
 	(1,10,"(item)","action","app.about",None,None,None,None,None,None,None,None,None),
 	(1,10,"(item)","label","_About Gtk-Calculator","yes",None,None,None,None,None,None,None,None),
-	(1,11,"GtkGrid","baseline-row","2",None,None,None,None,None,None,None,None,None),
 	(1,11,"GtkGrid","column-spacing","2",None,None,None,None,None,None,None,None,None),
 	(1,11,"GtkGrid","row-spacing","2",None,None,None,None,None,None,None,None,None),
-	(1,12,"GtkBox","spacing","2",None,None,None,None,None,None,None,None,None),
 	(1,12,"GtkWidget","halign","end",None,None,None,None,None,None,None,None,None),
-	(1,12,"GtkWidget","vexpand","True",None,None,None,None,None,None,None,None,None),
-	(1,12,"GtkWidget","width-request","0",None,None,None,None,None,None,None,None,None),
-	(1,13,"GtkLabel","ellipsize","start",None,None,None,None,None,None,None,None,None),
-	(1,13,"GtkLabel","lines","4",None,None,None,None,None,None,None,None,None),
-	(1,13,"GtkLabel","max-width-chars","50",None,None,None,None,None,None,None,None,None),
-	(1,13,"GtkLabel","width-chars","1",None,None,None,None,None,None,None,None,None),
+	(1,14,"GtkWidget","margin-bottom","2",None,None,None,None,None,None,None,None,None),
+	(1,14,"GtkWidget","margin-end","2",None,None,None,None,None,None,None,None,None),
+	(1,14,"GtkWidget","margin-start","2",None,None,None,None,None,None,None,None,None),
+	(1,14,"GtkWidget","margin-top","2",None,None,None,None,None,None,None,None,None),
+	(1,15,"GtkTextView","monospace","True",None,None,None,None,None,None,None,None,None),
 	(1,16,"GtkWidget","halign","start",None,None,None,None,None,None,None,None,None),
 	(1,17,"GtkButton","label","[]/[]",None,None,None,None,None,None,None,None,None),
 	(1,18,"GtkButton","label","[]√[]",None,None,None,None,None,None,None,None,None),
 	(1,19,"GtkButton","label","x^[]",None,None,None,None,None,None,None,None,None),
 	(1,20,"GtkButton","label","log[][]",None,None,None,None,None,None,None,None,None),
-	(1,21,"GtkActionable","action-name","solveEquation_input",None,None,None,None,None,None,None,None,None),
-	(1,21,"GtkButton","label","solve",None,None,None,None,None,None,None,None,None),
 	(1,23,"GtkButton","label","≥",None,None,None,None,None,None,None,None,None),
 	(1,24,"GtkButton","label","≤",None,None,None,None,None,None,None,None,None),
 	(1,25,"GtkButton","label","{ [] = []",None,None,None,None,None,None,None,None,None),
 	(1,27,"GtkButton","label","sin()",None,None,None,None,None,None,None,None,None),
 	(1,28,"GtkButton","label","cos()",None,None,None,None,None,None,None,None,None),
-	(1,29,"GtkButton","label","tg()",None,None,None,None,None,None,None,None,None)
+	(1,29,"GtkButton","label","tg()",None,None,None,None,None,None,None,None,None),
+	(1,30,"GtkActionable","action-name","solve_equation",None,None,None,None,None,None,None,None,None),
+	(1,30,"GtkButton","can-shrink","True",None,None,None,None,None,None,None,None,None),
+	(1,30,"GtkButton","label","solve",None,None,None,None,None,None,None,None,None)
   </object_property>
   <object_layout_property>
 	(1,11,12,"GtkGridLayoutChild","column-span","2",None,None,None,None),
-	(1,11,12,"GtkGridLayoutChild","row-span","2",None,None,None,None),
 	(1,11,14,"GtkGridLayoutChild","column-span","2",None,None,None,None),
-	(1,11,14,"GtkGridLayoutChild","row","2",None,None,None,None),
+	(1,11,14,"GtkGridLayoutChild","row","1",None,None,None,None),
 	(1,11,16,"GtkGridLayoutChild","column","1",None,None,None,None),
-	(1,11,16,"GtkGridLayoutChild","row","4",None,None,None,None),
-	(1,11,21,"GtkGridLayoutChild","row","3",None,None,None,None),
-	(1,11,22,"GtkGridLayoutChild","row","4",None,None,None,None),
-	(1,11,26,"GtkGridLayoutChild","row","5",None,None,None,None)
+	(1,11,16,"GtkGridLayoutChild","row","3",None,None,None,None),
+	(1,11,22,"GtkGridLayoutChild","row","3",None,None,None,None),
+	(1,11,26,"GtkGridLayoutChild","row","4",None,None,None,None),
+	(1,11,30,"GtkGridLayoutChild","row","2",None,None,None,None)
   </object_layout_property>
 </cambalache-project>
