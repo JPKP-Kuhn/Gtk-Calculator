@@ -121,7 +121,7 @@
             </child>
             <child>
               <object class="GtkButton" id="equation_input">
-                <property name="action-name">win.open</property>
+                <property name="action-name">win.read</property>
                 <property name="can-shrink">True</property>
                 <property name="label">solve</property>
                 <layout>

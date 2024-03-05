@@ -24,20 +24,28 @@ class GtkCalculatorWindow(Adw.ApplicationWindow):
     __gtype_name__ = 'GtkCalculatorWindow'
     
 
+    #GtkTextView
     equation_text = Gtk.Template.Child() #Where digit the equation
-    equation_input = Gtk.Template.Child() #the button solve
+    #GtkLabel
+    equation_output = Gtk.Template.Child() #the result of the equation
 
+    #GtkButtons
+    equation_input = Gtk.Template.Child() #the button solve
 
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
-        solveEquation_action = Gio.SimpleAction(name="open")
+        #solve button
+        solveEquation_action = Gio.SimpleAction(name="read")
         solveEquation_action.connect("activate", self.solveEquation)
         self.add_action(solveEquation_action)
 
     def solveEquation(self, action, _):
-        print("Solving equation")
-        equation = self.equation_text.get_text()
-        print(equation)
+        buffer = self.equation_text.get_buffer()
+        start = buffer.get_start_iter()
+        end = buffer.get_end_iter()
+        global equation 
+        equation = buffer.get_text(start, end, True)
+        self.equation_output.set_text((equation))
 
