@@ -45,12 +45,12 @@ class GtkCalculatorApplication(Adw.Application):
             preferences of the application
         """
         super().__init__(application_id='org.joaopedrokuhn.GtkCalculator',
-                         flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
-        self.create_action('quit', lambda *_: self.quit(), ['<primary>q'])
+                 flags=Gio.ApplicationFlags.DEFAULT_FLAGS)
+        self.create_action('quit', lambda *_: self.quit(), shortcuts=['<primary>q'])
         self.create_action('about', self.on_about_action)
         self.create_action('preferences', self.on_preferences_action)
 
-        self.create_action('solve', self.detectRoots, ['<primary>Return'])
+        self.set_accels_for_action('win.read', ['<Ctrl>Return'])
 
     def do_activate(self):
         """Called when the application is activated.
@@ -78,8 +78,6 @@ class GtkCalculatorApplication(Adw.Application):
         """Callback for the app.preferences action."""
         print('app.preferences action activated')
 
-    def detectRoots(self, widget, _):
-        pass
 
     def create_action(self, name, callback, shortcuts=None):
         """Add an application action.
