@@ -45,7 +45,18 @@ class GtkCalculatorWindow(Adw.ApplicationWindow):
         buffer = self.equation_text.get_buffer()
         start = buffer.get_start_iter()
         end = buffer.get_end_iter()
-        global equation 
         equation = buffer.get_text(start, end, True)
-        self.equation_output.set_text((equation))
+        self.equation_roots(action, equation)
+
+    def equation_roots(self, action, equation):
+        superscript = ['⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹']
+        root = 0
+        for i in range(10):
+            if superscript[i] in equation:
+                root = i      
+        if root == 0:
+            self.equation_output.set_text((f'Roots of the equation: {equation} are: {root}'))
+        else:    
+            self.equation_output.set_text((f'Roots of the equation: {equation} are: {root}'))
+
 
